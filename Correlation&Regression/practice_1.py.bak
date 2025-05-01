@@ -1,4 +1,4 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 import statistics as stat
 import math as np
 
@@ -19,9 +19,9 @@ xi_xbar = [x - x_mean for x in phy_score_x]
 yi_ybar = [y - y_mean for y in history_score_y]
   
 numerator = sum(multiply(xi_xbar, yi_ybar))
-denominator = sum(square(xi_xbar))
+denominator = np.sqrt(sum(square(xi_xbar))*sum(square(yi_ybar)))
 
 coefficient = numerator/denominator
-print(round(coefficient,3))
+print(coefficient)
 
     
